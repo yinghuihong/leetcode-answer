@@ -71,9 +71,11 @@ func minCostTickets(days []int, costs []int) int {
 		}
 		if dayM[day] {
 			fmt.Print("=> ")
-			fmt.Print(day)
+			fmt.Println(day)
 			memo[day] = min(min(dp(day+1)+costs[0], dp(day+7)+costs[1]), dp(day+30)+costs[2])
-			fmt.Print(" memo ")
+			fmt.Print("memo day ")
+			fmt.Print(day)
+			fmt.Print(" ")
 			fmt.Println(memo[day])
 		} else {
 			fmt.Println(day)
